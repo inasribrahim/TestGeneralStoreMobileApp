@@ -1,6 +1,5 @@
 package generalStore.ecommerceTest;
 
-import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -13,7 +12,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -61,7 +59,7 @@ public class ecommerce_tc_2 {
 		String lastpageText=   driver.findElement(By.id("com.androidsample.generalstore:id/productName")).getText();
 		Assert.assertEquals("Converse All Star", lastpageText);
 }
-	
+	// Add Product to cart Shop and verify the name of product & check the toast message error when click cart shop without choose any product 
 	@Test
 	public void tc_2() throws MalformedURLException{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
